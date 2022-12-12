@@ -4,9 +4,37 @@
 #include "pch.h"
 #include <iostream>
 
+using namespace std;
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Current Desktop is:" << GetThreadDesktop(GetCurrentThreadId()) << "\n" << endl;
+
+    //현재 Desktop를 저장
+    HDESK hBeforDesktop = GetThreadDesktop(GetCurrentThreadId());
+
+    //새로운 Desktop 생성
+    HDESK hAfterDesktop = CreateDesktop(L"hidden", NULL, NULL, 0, GENERIC_ALL, NULL);
+
+    cout << "Change Thread Desktop\n" << endl;
+    //생성한 데스크탑은 현재 프로세스에 설정, 이를 통해 생성한 데스크톱에서 현재 코드가 동작 가능
+    SetThreadDesktop(hAfterDesktop);
+
+    cout << "Current Desktop is:" << GetThreadDesktop(GetCurrentThreadId()) << "\n" << endl;
+
+    //설정한 데스크톱 활성화
+    SwitchDesktop(hAfterDesktop);
+
+    //메시지를 화면에 표시
+    MessageBox(NULL, L"이것이 데스크톱 화면이다!!", L"hidden", MB_OK);
+
+    //다시 기존의 데스크톱 활성화
+    SwitchDesktop(hBeforDesktop);
+
+    //이전 데스크톱 종료
+    CloseDesktop(hAfterDesktop);
+    system("pause");
+    return 0;
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
