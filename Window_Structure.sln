@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EX_04_Threadpri", "EX_04_Th
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EX_04_Mutex", "EX_04_Mutex\EX_04_Mutex.vcxproj", "{29D5C05D-A771-4095-9236-A617017FF3A1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EX_04_CreateMutex", "EX_04_CreateMutex\EX_04_CreateMutex.vcxproj", "{C9894FAB-714C-4890-ACF9-7591558F1E8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +113,14 @@ Global
 		{29D5C05D-A771-4095-9236-A617017FF3A1}.Release|x64.Build.0 = Release|x64
 		{29D5C05D-A771-4095-9236-A617017FF3A1}.Release|x86.ActiveCfg = Release|Win32
 		{29D5C05D-A771-4095-9236-A617017FF3A1}.Release|x86.Build.0 = Release|Win32
+		{C9894FAB-714C-4890-ACF9-7591558F1E8B}.Debug|x64.ActiveCfg = Debug|x64
+		{C9894FAB-714C-4890-ACF9-7591558F1E8B}.Debug|x64.Build.0 = Debug|x64
+		{C9894FAB-714C-4890-ACF9-7591558F1E8B}.Debug|x86.ActiveCfg = Debug|Win32
+		{C9894FAB-714C-4890-ACF9-7591558F1E8B}.Debug|x86.Build.0 = Debug|Win32
+		{C9894FAB-714C-4890-ACF9-7591558F1E8B}.Release|x64.ActiveCfg = Release|x64
+		{C9894FAB-714C-4890-ACF9-7591558F1E8B}.Release|x64.Build.0 = Release|x64
+		{C9894FAB-714C-4890-ACF9-7591558F1E8B}.Release|x86.ActiveCfg = Release|Win32
+		{C9894FAB-714C-4890-ACF9-7591558F1E8B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
